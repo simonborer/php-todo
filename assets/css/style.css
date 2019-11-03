@@ -1,0 +1,62 @@
+body {
+    padding: calc(50px + 2rem) 100px 2rem;
+    max-height: 100vh;
+    overflow-y: auto;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background: #BCC4DB;
+}
+
+.bg-primary {
+	background-color: #6987C9 !important;
+}
+.border-primary {
+	border-color: #6987C9 !important;
+}
+.btn-primary {
+	background-color: #424663 !important;
+	border: 0 solid transparent;
+}
+
+.btn {
+	margin: 1rem 0;
+}
+
+.navbar .nav-item {
+	margin:0 1rem;
+	padding: .25rem 1rem;
+}
+.navbar-nav {
+	margin-left: 2rem;
+}
+.btn-link {
+	margin: 0;
+}
+
+label {
+	margin-top: 1em;
+}
+
+.card {
+	margin: 2rem 0;
+	box-shadow: -1px 2px 7px rgba(0,0,0,0.25)
+}
+.card-header {
+	background-color: #D1C0C5;
+}
+.card-footer {
+	background-color: #BBDFF6;
+}
+.container {
+	min-height: calc(90vh - 58px - 75px);
+	padding-left: 5px;
+}
+
+@media (min-width: 1080px) {
+	.navbar {
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+	.navbar-brand {
+		margin-left: 20px;
+	}
+}
