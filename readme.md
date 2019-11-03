@@ -21,6 +21,9 @@
 Read through the code comments. The important stuff will take you to files in the `/pages/`,
 `/actions/`, and `/templates/` folders.
 
+You can see a basic version of [a PHP file calling
+to our database here](https://github.com/simonborer/php-todo/blob/master/basic.php).
+
 ## Based on
 
 [todo-php](https://github.com/mikegcoleman/todo-php) by [mikegcoleman](https://github.com/mikegcoleman)
