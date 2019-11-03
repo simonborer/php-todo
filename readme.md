@@ -18,6 +18,9 @@
 
 [index.php](https://github.com/simonborer/php-todo/blob/master/index.php)
 
+Read through the code comments. The important stuff will take you to files in the `/pages/`,
+`/actions/`, and `/templates/` folders.
+
 ## Based on
 
 [todo-php](https://github.com/mikegcoleman/todo-php) by [mikegcoleman](https://github.com/mikegcoleman)
