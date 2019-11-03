@@ -1,29 +1,32 @@
 <?php
 
-if (isset($_POST['submit']) && $statement) {
-	header('Location: /index.php');
-}
+    date_default_timezone_set("America/Toronto");
 
-require "../assets/configs/config.php";
-require "../utilities/common.php";
+    if (isset($_POST['submit']) && $statement) {
+    	header('Location: /index.php');
+    }
 
-if (isset($_GET['id'])) {
-	try {
-		$connection = new PDO($dsn, $username, $password, $options);
+    require "../assets/configs/config.php";
+    require "../utilities/common.php";
 
-		$id = $_GET['id'];
+    if (isset($_GET['id'])) {
+    	try {
+    		$connection = new PDO($dsn, $username, $password, $options);
 
-		$sql = "SELECT * FROM tasks WHERE id = :id";
-		$statement = $connection->prepare($sql);
-		$statement->bindValue(':id', $id);
-		$statement->execute();
+    		$id = $_GET['id'];
 
-		$task = $statement->fetch(PDO::FETCH_ASSOC);
+    		$sql = "SELECT * FROM tasks WHERE id = :id";
+    		$statement = $connection->prepare($sql);
+    		$statement->bindValue(':id', $id);
+    		$statement->execute();
 
-	} catch (PDOException $error) {
-		echo $sql . "<br>" . $error->getMessage();
-	}
-}
+    		$task = $statement->fetch(PDO::FETCH_ASSOC);
+
+    	} catch (PDOException $error) {
+    		echo $sql . "<br>" . $error->getMessage();
+    	}
+    }
+    
 ?>
 
 

@@ -1,24 +1,28 @@
 <?php
-require "../assets/configs/config.php";
-require "../utilities/common.php";
 
-if (isset($_GET['id'])) {
-	try {
-		$connection = new PDO($dsn, $username, $password, $options);
+  date_default_timezone_set("America/Toronto");
 
-		$id = $_GET['id'];
+  require "../assets/configs/config.php";
+  require "../utilities/common.php";
 
-		$sql = "SELECT * FROM tasks WHERE id = :id";
-		$statement = $connection->prepare($sql);
-		$statement->bindValue(':id', $id);
-		$statement->execute();
+  if (isset($_GET['id'])) {
+  	try {
+  		$connection = new PDO($dsn, $username, $password, $options);
 
-		$task = $statement->fetch(PDO::FETCH_ASSOC);
+  		$id = $_GET['id'];
 
-	} catch (PDOException $error) {
-		echo $sql . "<br>" . $error->getMessage();
-	}
-}
+  		$sql = "SELECT * FROM tasks WHERE id = :id";
+  		$statement = $connection->prepare($sql);
+  		$statement->bindValue(':id', $id);
+  		$statement->execute();
+
+  		$task = $statement->fetch(PDO::FETCH_ASSOC);
+
+  	} catch (PDOException $error) {
+  		echo $sql . "<br>" . $error->getMessage();
+  	}
+  }
+  
 ?>
 
 
